@@ -2,7 +2,8 @@ module Ch1.Utils (
   toDigits,
   toDigitsRev,
   doubleEveryOther,
-  sumDigits
+  sumDigits,
+  isValid
 ) where
 
 toDigits :: Integer -> [Integer]
@@ -36,3 +37,6 @@ sumAndSum acc num = do
 
 sumDigits :: [Integer] -> Integer
 sumDigits = foldl sumAndSum 0
+
+isValid :: Integer -> Bool
+isValid num = True 
