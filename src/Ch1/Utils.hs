@@ -1,7 +1,8 @@
 module Ch1.Utils (
   toDigits,
   toDigitsRev,
-  doubleEveryOther
+  doubleEveryOther,
+  sumDigits
 ) where
 
 toDigits :: Integer -> [Integer]
@@ -27,3 +28,6 @@ doubleEveryOther :: [Integer] -> [Integer]
 doubleEveryOther arr = do
   let result = foldr (doubleAndConcatWhenIndexMatch calcFunc) (0, []) arr
   reverse (snd result)
+
+sumDigits :: [Integer] -> Integer
+sumDigits arr = 0
