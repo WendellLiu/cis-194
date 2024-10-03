@@ -38,5 +38,10 @@ sumAndSum acc num = do
 sumDigits :: [Integer] -> Integer
 sumDigits = foldl sumAndSum 0
 
+isDivisibleByTen :: Integer -> Bool
+isDivisibleByTen num
+  | num `mod` 10 == 0 = True
+  | otherwise = False
+
 isValid :: Integer -> Bool
-isValid num = True 
+isValid = isDivisibleByTen .sumDigits . doubleEveryOther . toDigits
