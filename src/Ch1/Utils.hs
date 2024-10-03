@@ -1,6 +1,7 @@
 module Ch1.Utils (
   toDigits,
-  toDigitsRev
+  toDigitsRev,
+  doubleEveryOther
 ) where
 
 toDigits :: Integer -> [Integer]
@@ -12,3 +13,5 @@ toDigits num  = toDigits ( num `div` 10 ) ++ [num `mod` 10]
 toDigitsRev :: Integer -> [Integer]
 toDigitsRev = reverse . toDigits 
 
+doubleEveryOther :: [Integer] -> [Integer]
+doubleEveryOther arr = arr

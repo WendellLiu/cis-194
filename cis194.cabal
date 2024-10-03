@@ -57,6 +57,7 @@ test-suite cis194-test
   main-is: Spec.hs
   other-modules:
       Ch1.Ex1Spec
+      Ch1.Ex2Spec
       Paths_cis194
   autogen-modules:
       Paths_cis194
