@@ -29,5 +29,10 @@ doubleEveryOther arr = do
   let result = foldr (doubleAndConcatWhenIndexMatch calcFunc) (0, []) arr
   reverse (snd result)
 
+sumAndSum :: Integer -> Integer -> Integer
+sumAndSum acc num = do
+  let splitDigits = (sum . toDigits) num 
+  acc + splitDigits
+
 sumDigits :: [Integer] -> Integer
-sumDigits arr = 0
+sumDigits = foldl sumAndSum 0
